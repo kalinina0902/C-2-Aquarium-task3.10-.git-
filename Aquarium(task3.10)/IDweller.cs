@@ -8,5 +8,7 @@ namespace Aquarium_task3._10_
 {
     interface IDweller
     {
+        void Create();
+
     }
 }

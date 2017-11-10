@@ -8,5 +8,12 @@ namespace Aquarium_task3._10_
 {
     class Fish:IDweller
     {
+        private int satiety;
+        private string kind;
+        public void Create()
+        {
+
+        }
+        
     }
 }
