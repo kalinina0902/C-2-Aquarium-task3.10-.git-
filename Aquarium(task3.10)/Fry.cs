@@ -6,21 +6,20 @@ using System.Threading.Tasks;
 
 namespace Aquarium_task3._10_
 {
-    class Fish:IDweller
+    class Fry:IDweller
     {
-        private int satiety;
-        public int Satiety { get { return satiety; } set { satiety = value; } }
         private string kind;
+        private int age;
         public string Kind { get { return kind; } set { kind = value; } }
-        public Fish(int satiety,string kind)
+        public int Age { get { return age; } set { age = value; } }
+        public Fry(int age,string kind)
         {
+            this.Age = age;
             this.Kind = kind;
-            this.Satiety = satiety;
         }
         public void Create()
         {
-
+            
         }
-        
     }
 }

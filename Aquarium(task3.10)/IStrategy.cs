@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace Aquarium_task3._10_
 {
-    interface IDweller
+    interface IStrategy
     {
-         void Create();
-
+        void Death();
+        void Eating();
+        void Move();
+        void Reproduction();
     }
 }
