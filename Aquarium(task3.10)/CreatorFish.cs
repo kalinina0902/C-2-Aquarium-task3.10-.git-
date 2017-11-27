@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace Aquarium_task3._10_
 {
-    interface IDweller
+    class CreatorFish:CreatorDweller
     {
-         void Create();
-
+        public override Dweller Create(Random rnd, IStrategy s)
+        {
+            return new Fish(rnd, s);
+        }
     }
 }

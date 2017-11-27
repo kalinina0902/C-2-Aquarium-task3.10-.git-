@@ -9,8 +9,8 @@ namespace Aquarium_task3._10_
     interface IStrategy
     {
         void Death();
-        void Eating();
-        void Move();
+        void Eating(ref double x, ref double y, Eat e);
+        void Move(ref double x, ref double y, Random rnd);
         void Reproduction();
     }
 }

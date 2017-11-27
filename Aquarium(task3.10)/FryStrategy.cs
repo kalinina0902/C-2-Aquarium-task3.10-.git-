@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Aquarium_task3._10_
 {
-    class PredatoryfishStrategy:IStrategy
+    class FryStrategy:IStrategy
     {
         public void Move()
         {

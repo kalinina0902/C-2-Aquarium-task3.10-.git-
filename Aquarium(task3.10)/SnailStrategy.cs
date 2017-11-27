@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Aquarium_task3._10_
 {
-    class NormalFishStrategy:IStrategy
+    class SnailStrategy:IStrategy
     {
         public void Move()
         {
@@ -16,11 +16,11 @@ namespace Aquarium_task3._10_
         {
 
         }
-        public void Reproduction()
-        {
-            Fry a = new Fry(1, "Нехищник");
-        }
         public void Eating()
+        {
+
+        }
+        public void Reproduction()
         {
 
         }

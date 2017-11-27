@@ -1,1 +1,5 @@
 C:\Универ\Задачи 2 курс\Aquarium(task3.10)\Aquarium(task3.10)\bin\Debug\Aquarium(task3.10).exe.config
+C:\Универ\Задачи 2 курс\Aquarium(task3.10)\Aquarium(task3.10)\obj\Debug\Aquarium(task3.10).csprojResolveAssemblyReference.cache
+C:\Универ\Задачи 2 курс\Aquarium(task3.10)\Aquarium(task3.10)\obj\Debug\Aquarium_task3._10_.Form1.resources
+C:\Универ\Задачи 2 курс\Aquarium(task3.10)\Aquarium(task3.10)\obj\Debug\Aquarium_task3._10_.Properties.Resources.resources
+C:\Универ\Задачи 2 курс\Aquarium(task3.10)\Aquarium(task3.10)\obj\Debug\Aquarium(task3.10).csproj.GenerateResource.Cache
