@@ -16,6 +16,8 @@ namespace Aquarium_task3._10_
         {
             InitializeComponent();
         }
+        Random rnd = new Random();
+        Aquarium h2o;
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
             label1.Text = e.Location.ToString();
@@ -25,10 +27,13 @@ namespace Aquarium_task3._10_
         {
 
             int t = temperature.Value;
-            int fi = 3;
-            int sn = 6;
-            int fr = 0;
-            Aquarium h2o = new Aquarium(t, fi, fr, sn);
+           
+            h2o = new Aquarium(t);
+            CreatorDweller creator;
+            creator = new CreatorFish();
+            IStrategy fs = new  FishStrategy();
+            Fish f = creator.Create(rnd, fs);
+            h2o.denizen.Add(f);
             h2o.StartGame();
         }
 
@@ -43,6 +48,17 @@ namespace Aquarium_task3._10_
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void food_Click(object sender, EventArgs e)
+        {
+            h2o.CreateFood(rnd.Next(15, 40), rnd.Next(0, 5));
+            h2o.FallFood();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
         {
 
         }

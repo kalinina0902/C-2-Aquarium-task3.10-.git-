@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace Aquarium_task3._10_
 {
-    class Fish:Dweller
+   public class Fish : Dweller
     {
-        public Fish(int x, int y)
+        public Fish(Random rnd, IStrategy s)
         {
-            creator = new CreatorFish();
-            creator.Create( x, y);
-            X = x;
-            Y = y; 
+            this.Satiety = 10;
+            this.Kind = "Взрослая";
+            this.X = rnd.Next(0, 100);
+            this.Y = rnd.Next(10, 150);
+            //s = FishStrategy;
 
         }
         //private int satiety;
@@ -31,6 +32,6 @@ namespace Aquarium_task3._10_
         //    this.TargetX = rnd.Next(4);
         //    this.TargetY = rnd.Next(5);
         //}
-        
+
     }
 }

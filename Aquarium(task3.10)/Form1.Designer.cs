@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.off = new System.Windows.Forms.RadioButton();
@@ -37,6 +38,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Startwork = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.food = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.temperature)).BeginInit();
             this.SuspendLayout();
@@ -125,12 +128,28 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "*";
             // 
+            // food
+            // 
+            this.food.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("food.BackgroundImage")));
+            this.food.Location = new System.Drawing.Point(132, 14);
+            this.food.Name = "food";
+            this.food.Size = new System.Drawing.Size(75, 23);
+            this.food.TabIndex = 13;
+            this.food.Text = "Покормить";
+            this.food.UseVisualStyleBackColor = true;
+            this.food.Click += new System.EventHandler(this.food_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(832, 509);
+            this.Controls.Add(this.food);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Startwork);
@@ -157,6 +176,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button Startwork;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button food;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

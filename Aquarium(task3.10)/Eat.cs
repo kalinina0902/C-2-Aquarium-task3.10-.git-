@@ -6,11 +6,38 @@ using System.Threading.Tasks;
 
 namespace Aquarium_task3._10_
 {
-    class Eat
+    public class Eat
     {
-        private double x;
-        public double X { get { return x; } set { x = value; } }
-        private double y;
-        public double Y { get { return y; } set { y = value; } }
+        public List<Food> Korm { get; private set; } = new List<Food>();
+        public class Food
+        {
+            public Food(int x, int y) 
+            {
+                this.x = x;
+                this.y = y;
+                this.flag = false;
+            }
+            public int x;
+            public int y;
+            public bool flag;
+
+            public void Sink()
+            {
+                if (y <= 650)
+                    y += 5;
+            }
+        }
+
+
+        Random rnd = new Random();
+        public Eat(int x, int y)
+        {
+            for (int i = 0; i < rnd.Next(4,9); i++)
+            {
+                Korm.Add(new Food(rnd.Next(x - 30, x + 30), rnd.Next(y, y + 20)));
+            }
+        }
+
+
     }
 }

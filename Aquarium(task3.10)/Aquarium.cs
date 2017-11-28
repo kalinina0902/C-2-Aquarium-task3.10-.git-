@@ -6,21 +6,22 @@ using System.Threading.Tasks;
 
 namespace Aquarium_task3._10_
 {
-    class Aquarium
+   
+    public class Aquarium
     {
+        public List <Dweller> denizen { get; private set; } = new List<Dweller>();
+        public List<Eat> Feed { get; private set; } = new List<Eat>();
         private int temper;
         public int Temper { get; set; }
        // public int Light { get; set; }
         CreatorDweller creator;
-        private int light;
-        private Fish[] fish;
-        private Fry[] fry;
-        private Snail[] snail;
-        public Aquarium(int t,int fi,int fr, int s)
+        //private int light;
+        //private Fish[] fish;
+        //private Fry[] fry;
+        //private Snail[] snail;
+        public Aquarium(int t)
         {
-            fish = new Fish[fi];
-            fry = new Fry[fr];
-            snail = new Snail[s];
+            
             temper = t;
             //light = l;
 
@@ -46,6 +47,19 @@ namespace Aquarium_task3._10_
 
 
         }
+        public void CreateFood(int x, int y)
+        {
+            Feed.Add(new Eat(x, y));
+        }
+
+        public void FallFood()
+        {
+            foreach (Eat ea in Feed)
+                foreach (Eat.Food kr in ea.Korm)
+                    kr.Sink();
+        }
+
+       
 
     }
 }
