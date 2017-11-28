@@ -9,8 +9,8 @@ namespace Aquarium_task3._10_
     public interface IStrategy
     {
         void Death();
-        void Eating(ref double x, ref double y, List<Eat> e);
-        void Move(ref double x, ref double y, Random rnd);
+        void Eating(Fish f, List<Eat> e);
+        void Move(Fish f, List<Eat> e);
         void Reproduction();
         bool IsHungry(Dweller f);
     }

@@ -8,6 +8,7 @@ namespace Aquarium_task3._10_
 {
    public class Fish : Dweller
     {
+        public int a;
         public Fish(Random rnd, IStrategy s)
         {
             this.Satiety = 10;
