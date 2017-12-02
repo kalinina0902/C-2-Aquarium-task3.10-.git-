@@ -8,28 +8,34 @@ namespace Aquarium_task3._10_
 {
     class FishStrategy : IStrategy
     {
-        public void Move(Fish f, List<Eat> food)
+        public void Move(Dweller f, List<Eat> food)
         {
             if (IsHungry(f))
             {
                 Eating( f, food);
             }
-            double dx = f.X - f.TX;
-            double dy = f.Y - f.TY;
-            { if (dx < 0)
+            int dx = f.X - f.TX;
+            int dy = f.Y - f.TY;
+            while (dx != 0)
+            {
+                if (dx < 0)
                 {
-                    f.X += dx / 10.0;
-                } else if (dx == 0)
+                    f.X += dx / 10;
+                }
+                else if (dx == 0)
                 {
                     f.X += 0;
                 }
                 else
                 {
-                    f.X -= dx / 10.0;
+                    f.X -= dx / 10;
                 }
+            }
+            while (dy != 0)
+            {
                 if (dy < 0)
                 {
-                    f.Y += dy / 10.0;
+                    f.Y += dy / 10;
                 }
                 else if (dy == 0)
                 {
@@ -37,9 +43,10 @@ namespace Aquarium_task3._10_
                 }
                 else
                 {
-                    f.Y -= dy / 10.0;
+                    f.Y -= dy / 10;
                 }
             }
+            
 
         }
 
@@ -51,7 +58,7 @@ namespace Aquarium_task3._10_
         {
             Fry a = new Fry(1, "a");
         }
-        public void Eating(Fish f, List<Eat> Feed)
+        public void Eating(Dweller f, List<Eat> Feed)
         {
             //int min;
             //foreach (Eat ea in Feed)
@@ -61,13 +68,17 @@ namespace Aquarium_task3._10_
             //    }
             Random rnd = new Random();
             int i = rnd.Next(0, Feed.Count);
-            double dx = f.X - Feed[i].Korm[i].x;
-            double dy = f.Y - Feed[i].Korm[i].y;
-            while (dx != 0 && dy != 0)
+            int j = rnd.Next(0, Feed[i].Korm.Count);
+            int dx = f.X - Feed[i].Korm[j].x;
+            int dy = f.Y - Feed[i].Korm[i].y;
+            int stepX = 10;
+            int stepY = 5;
+
+            while (dx != 0)
             {
                 if (dx < 0)
                 {
-                    f.X += dx / 10.0;
+                    f.X += stepX;
                 }
                 else if (dx == 0)
                 {
@@ -75,11 +86,13 @@ namespace Aquarium_task3._10_
                 }
                 else
                 {
-                    f.X -= dx / 10.0;
+                    f.X -= stepX;
                 }
+            }
+                while (dy != 0) { 
                 if (dy < 0)
                 {
-                    f.Y += dy / 10.0;
+                    f.Y += stepY;
                 }
                 else if (dy == 0)
                 {
@@ -87,15 +100,16 @@ namespace Aquarium_task3._10_
                 }
                 else
                 {
-                    f.Y -= dy / 10.0;
+                    f.Y -= stepY;
                 }
             }
+            f.Satiety += 45;
             Feed.RemoveAt(i);
 
 
 
         }
-        public bool IsHungry(Fish f)
+        public bool IsHungry(Dweller f)
         {
             if (f.Satiety < 30) { return true; }
             return false;

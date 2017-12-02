@@ -8,10 +8,10 @@ namespace Aquarium_task3._10_
 {
     public class Eat
     {
-        public List<Food> Korm { get; private set; } = new List<Food>();
-        public class Food
+        public List<Crumb> Korm { get; private set; } = new List<Crumb>();
+        public class Crumb
         {
-            public Food(int x, int y) 
+            public Crumb(int x, int y) 
             {
                 this.x = x;
                 this.y = y;
@@ -34,7 +34,7 @@ namespace Aquarium_task3._10_
         {
             for (int i = 0; i < rnd.Next(4,9); i++)
             {
-                Korm.Add(new Food(rnd.Next(x - 30, x + 30), rnd.Next(y, y + 20)));
+                Korm.Add(new Crumb(rnd.Next(x - 30, x + 30), rnd.Next(y, y + 20)));
             }
         }
 

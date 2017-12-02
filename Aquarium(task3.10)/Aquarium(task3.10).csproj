@@ -51,6 +51,7 @@
     <Compile Include="CreatorFish.cs" />
     <Compile Include="CreatorFry.cs" />
     <Compile Include="CreatorSnail.cs" />
+    <Compile Include="Draw.cs" />
     <Compile Include="Dweller.cs" />
     <Compile Include="Eat.cs" />
     <Compile Include="Fish.cs" />
