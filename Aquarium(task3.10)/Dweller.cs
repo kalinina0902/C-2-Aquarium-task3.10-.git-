@@ -10,6 +10,7 @@ namespace Aquarium_task3._10_
    public abstract class Dweller
     {
         Random rnd = new Random();
+        public bool turn = false;
         public Rectangle Pictureliife;
         private int satiety;
         public int Satiety { get { return satiety; } set { satiety = 100; } }

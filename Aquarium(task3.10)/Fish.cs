@@ -12,14 +12,14 @@ namespace Aquarium_task3._10_
         
         public Fish(Random rnd, IStrategy s)
         {
-            this.Satiety = 10;
-            this.Kind = "Взрослая";
-            this.X = rnd.Next(0, 100);
-            this.Y = rnd.Next(10, 150);
+            Satiety = 10;
+            Kind = "Взрослая";
+            X = rnd.Next(0, 100);
+            Y = rnd.Next(10, 150);
             TX = rnd.Next(80, 1450);
             TY = rnd.Next(40, 580);
             s = new FishStrategy();
-            this.Pictureliife = new Rectangle(X, Y, 150, 10);
+            Pictureliife = new Rectangle(X, Y + 100, 150, 10);
 
         }
         

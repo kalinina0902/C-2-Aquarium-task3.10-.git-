@@ -18,6 +18,8 @@ namespace Aquarium_task3._10_
         }
         Random rnd = new Random();
         Aquarium h2o;
+        Bitmap bmp;
+        Draw draw;
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
             label1.Text = e.Location.ToString();
@@ -25,16 +27,20 @@ namespace Aquarium_task3._10_
 
         private void Startwork_Click(object sender, EventArgs e)
         {
-
+            bmp = new Bitmap(Width, Height);
+            g = Graphics.FromImage(bmp);
+            g.DrawImage(Image.FromFile("background.png"), 0, 0);
+            BackgroundImage = bmp;
+            h2o = new Aquarium();
+            timer1.Enabled = true;
+            draw = new Draw();
             int t = temperature.Value;
-           
-            h2o = new Aquarium(t);
             CreatorDweller creator;
             creator = new CreatorFish();
             IStrategy fs = new  FishStrategy();
-            Fish f = creator.Create(rnd, fs);
-            h2o.denizen.Add(f);
-            h2o.StartGame();
+            Dweller f = creator.Create(rnd,fs);
+            h2o.AllFish.Add(f);
+            
         }
 
         private void temperature_Scroll(object sender, EventArgs e)
@@ -60,7 +66,7 @@ namespace Aquarium_task3._10_
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
+            h2o.Move();
         }
     }
 }
