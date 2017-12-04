@@ -9,6 +9,7 @@ namespace Aquarium_task3._10_
 {
    public abstract class Dweller
     {
+        public bool Death { get; protected set; } = false;
         Random rnd = new Random();
         public bool turn = false;
         public Rectangle Pictureliife;
@@ -24,6 +25,7 @@ namespace Aquarium_task3._10_
         public int TX { get { return tx; } set { tx = value; } }
         private int ty;
         public int TY { get { return ty; } set { ty = value; } }
+
         public virtual void SetPoint()
         {
 

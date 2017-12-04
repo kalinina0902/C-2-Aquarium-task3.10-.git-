@@ -3,3 +3,4 @@ C:\Универ\Задачи 2 курс\Aquarium(task3.10)\Aquarium(task3.10)\ob
 C:\Универ\Задачи 2 курс\Aquarium(task3.10)\Aquarium(task3.10)\obj\Debug\Aquarium_task3._10_.Form1.resources
 C:\Универ\Задачи 2 курс\Aquarium(task3.10)\Aquarium(task3.10)\obj\Debug\Aquarium_task3._10_.Properties.Resources.resources
 C:\Универ\Задачи 2 курс\Aquarium(task3.10)\Aquarium(task3.10)\obj\Debug\Aquarium(task3.10).csproj.GenerateResource.Cache
+C:\Users\User\Documents\Visual Studio 2015\Projects\говно\C-2-Aquarium-task3.10-.git-\Aquarium(task3.10)\bin\Debug\Aquarium(task3.10).exe.config
